@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>抖音抖动</title>
+<style>
+div{position: relative;left: 30px;width: 500px;}
+h1 {position: absolute;left: 0px;top: 0px;font-size: 60px;}
+#h1{color: rgb(104,179,178);}
+#h2{color: gray;}
+</style>
+</head>
+
+<body>
+<div>
+	<h1 id="h1">颤抖吧!骚年~~~</h1>
+	<h1 id="h2">颤抖吧!骚年~~~</h1>
+	<h1>颤抖吧!骚年~~~</h1>
+</div>
+<script>
+var h1 = document.getElementById('h1');
+var h2 = document.getElementById('h2');
+setInterval(function(){
+	if (h1.offsetLeft == 0) {
+		h1.style.left = -10+ 'px';
+	}else{
+		h1.style.left = 0+ 'px';
+	}
+},100);
+setInterval(function(){
+	if (h2.offsetLeft == 0) {
+		h2.style.left = 10+ 'px';
+	}else{
+		h2.style.left = 0+ 'px';
+	}
+},200);
+</script>
+</body>
+</html>
